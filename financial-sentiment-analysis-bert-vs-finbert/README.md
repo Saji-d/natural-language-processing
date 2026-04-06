@@ -101,7 +101,7 @@ for financial text.
 
 If the notebook does not render properly on GitHub, you can run it here:
 
-👉 https://colab.research.google.com/github/Saji-d/financial-sentiment-analysis-bert/blob/main/financial_sentiment_bert_vs_finbert.ipynb
+👉 https://colab.research.google.com/github/Saji-d/natural-language-processing-projects/blob/main/financial-sentiment-analysis-bert-vs-finbert/financial_sentiment_bert_vs_finbert.ipynb
 
 ---
 
