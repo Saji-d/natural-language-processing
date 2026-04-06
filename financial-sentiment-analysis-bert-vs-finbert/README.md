@@ -97,6 +97,14 @@ for financial text.
 
 ---
 
+## 🚀 Run on Google Colab
+
+If the notebook does not render properly on GitHub, you can run it here:
+
+👉 https://colab.research.google.com/github/Saji-d/financial-sentiment-analysis-bert/blob/main/financial_sentiment_bert_vs_finbert.ipynb
+
+---
+
 ## 📄 Documentation
 
 A detailed project report is included, covering:
