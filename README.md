@@ -1,4 +1,4 @@
-# 🧠 Natural Language Processing Projects
+# 🧠 Natural Language Processing
 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![NLP](https://img.shields.io/badge/NLP-6A5ACD)
