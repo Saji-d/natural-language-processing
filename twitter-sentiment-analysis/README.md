@@ -16,7 +16,7 @@ using classical machine learning techniques and a complete text preprocessing pi
 This project implements a **Twitter Sentiment Analysis system** that classifies tweets into **positive** or
 **negative** sentiment using **TF-IDF feature extraction** and a **Multinomial Naïve Bayes classifier**.
 
-The focus of this work is on **text preprocessing, feature engineering, and model evaluation**, rather than
+The focus of this work is on **text preprocessing, feature engineering and model evaluation**, rather than
 deployment or API integration.
 
 ---
@@ -51,7 +51,7 @@ The dataset was **balanced to 200,000 tweets** (100k positive + 100k negative).
 The following preprocessing steps were applied:
 
 - Lowercasing text  
-- Removing URLs, mentions, hashtags, and punctuation  
+- Removing URLs, mentions, hashtags and punctuation  
 - Tokenization  
 - Stopword removal  
 - Stemming (Porter Stemmer)  
@@ -99,7 +99,12 @@ This project was completed as part of a **Natural Language Processing (NLP) cour
 
 ## 👤 Author
 
-**Sajidur Rahman Sajid**  
-Computer Science & Engineering (CSE)  
-Aspiring **AI / Machine Learning / NLP Engineer**
+**Sajidur Rahman Sajid**: Full-Stack Developer and AI engineer from Dhaka.<br>
+BSc in CSE at American International University-Bangladesh (AIUB).
 
+<p>
+  <a href="https://www.sajidur.me"><img src="https://img.shields.io/badge/Portfolio-0B0E1A?style=flat-square&logo=googlechrome&logoColor=9B8CFA" alt="Portfolio"></a>
+  <a href="https://www.linkedin.com/in/sajidur-rahman-sajid/"><img src="https://img.shields.io/badge/LinkedIn-0B0E1A?style=flat-square&logo=linkedin&logoColor=8B7CF6" alt="LinkedIn"></a>
+  <a href="https://github.com/Saji-d"><img src="https://img.shields.io/badge/GitHub-0B0E1A?style=flat-square&logo=github&logoColor=EEF0FA" alt="GitHub"></a>
+  <a href="mailto:sajidsajidurrahman99@gmail.com"><img src="https://img.shields.io/badge/Email-0B0E1A?style=flat-square&logo=gmail&logoColor=9B8CFA" alt="Email"></a>
+</p>

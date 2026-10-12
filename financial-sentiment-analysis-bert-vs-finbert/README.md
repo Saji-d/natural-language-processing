@@ -16,7 +16,7 @@ using transformer-based models, with a focus on **BERT vs FinBERT** and the impa
 ## 📌 Overview
 
 This project presents a **comparative study of BERT and FinBERT** for **financial sentiment classification**.
-The task involves classifying financial text into **positive, neutral, and negative sentiment**
+The task involves classifying financial text into **positive, neutral and negative sentiment**
 using transformer models fine-tuned under identical experimental conditions.
 
 The goal is to evaluate how **domain-adapted language models** perform compared to
@@ -50,15 +50,15 @@ general-purpose transformers on financial text.
 
 Experiments were conducted using **public financial sentiment datasets**, including:
 
-- **Financial PhraseBank–style data**
+- **Financial PhraseBank-style data**
   - Financial news headlines and short statements
   - Labels: positive, neutral, negative
 
 - **FiQA-style financial data**
-  - Financial questions, reports, and market-related text
+  - Financial questions, reports and market-related text
   - Labels: positive, neutral, negative
 
-All datasets were **cleaned, normalized, and label-mapped consistently** prior to training.
+All datasets were **cleaned, normalized and label-mapped consistently** prior to training.
 
 ---
 
@@ -130,7 +130,12 @@ This project was completed as part of **Natural Language Processing coursework**
 ---
 
 ## 👤 Author
-**Sajidur Rahman Sajid**  
-Computer Science & Engineering (CSE)  
-Aspiring **Aspiring AI / Machine Learning / NLP Engineer**
+**Sajidur Rahman Sajid**: Full-Stack Developer and AI engineer from Dhaka.<br>
+BSc in CSE at American International University-Bangladesh (AIUB).
 
+<p>
+  <a href="https://www.sajidur.me"><img src="https://img.shields.io/badge/Portfolio-0B0E1A?style=flat-square&logo=googlechrome&logoColor=9B8CFA" alt="Portfolio"></a>
+  <a href="https://www.linkedin.com/in/sajidur-rahman-sajid/"><img src="https://img.shields.io/badge/LinkedIn-0B0E1A?style=flat-square&logo=linkedin&logoColor=8B7CF6" alt="LinkedIn"></a>
+  <a href="https://github.com/Saji-d"><img src="https://img.shields.io/badge/GitHub-0B0E1A?style=flat-square&logo=github&logoColor=EEF0FA" alt="GitHub"></a>
+  <a href="mailto:sajidsajidurrahman99@gmail.com"><img src="https://img.shields.io/badge/Email-0B0E1A?style=flat-square&logo=gmail&logoColor=9B8CFA" alt="Email"></a>
+</p>
