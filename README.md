@@ -1,106 +1,133 @@
-# 🧠 Natural Language Processing
+<div align="center">
+  <img src="assets/banner.svg" alt="natural-language-processing banner" width="100%">
+  <p><code>Two sentiment analysis notebooks with reports: BERT vs FinBERT and TF-IDF with Naive Bayes</code></p>
 
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
-![NLP](https://img.shields.io/badge/NLP-6A5ACD)
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-102230)
-![Transformers](https://img.shields.io/badge/Transformers-FFD21E?logo=huggingface&logoColor=black)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=white)
+  ![Status](https://img.shields.io/badge/status-academic-22d3ee?style=flat-square&labelColor=0B0E1A)
+  ![Licence](https://img.shields.io/badge/licence-MIT-8b7cf6?style=flat-square&labelColor=0B0E1A)
+  ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=c084fc&labelColor=0B0E1A)
+  ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=c084fc&labelColor=0B0E1A)
+  ![Transformers](https://img.shields.io/badge/Transformers-FFD21E?style=flat-square&logo=huggingface&logoColor=c084fc&labelColor=0B0E1A)
+  ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=c084fc&labelColor=0B0E1A)
+  ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=c084fc&labelColor=0B0E1A)
 
-A collection of **Natural Language Processing (NLP) projects** developed as part of academic coursework.  
-These projects focus on **text preprocessing, feature extraction, sentiment analysis, and transformer-based models** using Python and popular NLP libraries.
+  <a href="#-overview">Overview</a> · <a href="#-projects">Projects</a> · <a href="#-preview">Preview</a> · <a href="#-tech-stack">Tech Stack</a> · <a href="#-getting-started">Getting Started</a> · <a href="#-project-structure">Structure</a> · <a href="#-author">Author</a>
+</div>
 
----
+<img src="assets/divider.svg" alt="" width="100%">
 
-## 📂 Projects Included
+## ◈ Overview
 
-### 1️⃣ Financial Sentiment Analysis — BERT vs FinBERT
-📌 **Objective:**  
-Compare the performance of **BERT** and **FinBERT** for sentiment classification in the **financial domain**.
+An index of NLP coursework notebooks. Each sub-project is a self-contained Jupyter notebook with its own README and a PDF report.
 
-📌 **Key Highlights:**
-- Financial news and finance Q&A sentiment datasets
-- Data normalization and preprocessing
-- Transformer-based sentiment classification
-- Comparative evaluation of domain-specific vs general language models
+Two projects are included. One compares a general-purpose transformer with a finance-specific one. The other builds a classical text classification pipeline from scratch. These are academic experiments, not deployed services.
 
-📌 **Models Used:**
-- BERT
-- FinBERT
+<img src="assets/divider.svg" alt="" width="100%">
 
-📌 **Contents:**
-- `financial_sentiment_bert_vs_finbert.ipynb`
-- Raw and normalized financial sentiment datasets
-- Detailed experimental report
+## ◈ Projects
 
-📌 **Datasets:**
-- Financial News Sentiment Dataset  
-- Financial Finance-QA Sentiment Dataset  
+<table>
+<tr>
+<td width="50%" valign="top">
 
----
+**Financial Sentiment: BERT vs FinBERT**
 
-### 2️⃣ Twitter Sentiment Analysis
-📌 **Objective:**  
-Analyze public sentiment from Twitter data using classical machine learning techniques.
+Fine-tunes BERT and FinBERT under the same settings to classify financial text as positive, neutral or negative.
 
-📌 **Key Highlights:**
-- Text cleaning and preprocessing
-- Tokenization and feature extraction
-- Sentiment classification (Positive / Negative)
-- Model evaluation and performance analysis
+- Models: `bert-base-uncased` and `ProsusAI/finbert`
+- Data: a PhraseBank-like set and a combined FPB + FiQA set
+- Setup: 3 epochs, learning rate 2e-5, batch size 16, max length 128
 
-📌 **Contents:**
-- `twitter_sentiment_analysis.ipynb`
-- Preprocessed and raw Twitter sentiment datasets
-- Project report explaining methodology and results
+[Open folder](financial-sentiment-analysis-bert-vs-finbert) · [Notebook](financial-sentiment-analysis-bert-vs-finbert/financial_sentiment_bert_vs_finbert.ipynb) · [Report PDF](financial-sentiment-analysis-bert-vs-finbert/report/financial_sentiment_bert_vs_finbert.pdf)
 
-📌 **Dataset:**
-- Balanced Twitter sentiment dataset derived from publicly available sources
+</td>
+<td width="50%" valign="top">
 
----
+**Twitter Sentiment Analysis**
 
-## 🛠️ Technologies Used
+Classifies tweets as positive or negative with a full preprocessing pipeline, TF-IDF features and Multinomial Naive Bayes.
 
-- **Python**
-- **Natural Language Processing (NLP)**
-- **Scikit-learn**
-- **Transformers (Hugging Face)**
-- **BERT / FinBERT**
-- **Pandas, NumPy**
-- **Jupyter Notebook**
+- Data: Sentiment140, balanced to 200,000 tweets
+- Features: TF-IDF, 10,000 features, unigrams and bigrams
+- Split: stratified 80/20
 
----
-## 📁 Repository Structure
+[Open folder](twitter-sentiment-analysis) · [Notebook](twitter-sentiment-analysis/twitter_sentiment_analysis.ipynb) · [Report PDF](twitter-sentiment-analysis/report/twitter-sentiment-analysis.pdf)
+
+</td>
+</tr>
+</table>
+
+### Results recorded in the notebooks
+
+| Project | Model | Dataset | Test accuracy | Test macro-F1 |
+|---|---|---|---|---|
+| Financial sentiment | BERT-base | PhraseBank-like | 0.837 | 0.822 |
+| Financial sentiment | FinBERT | PhraseBank-like | 0.849 | 0.823 |
+| Financial sentiment | BERT-base | FPB + FiQA | 0.812 | 0.738 |
+| Financial sentiment | FinBERT | FPB + FiQA | 0.824 | 0.783 |
+| Twitter sentiment | TF-IDF + Naive Bayes | Sentiment140 (balanced, 40,000 test tweets) | 0.748 | 0.748 |
+
+FinBERT scores higher than BERT on both financial datasets in these runs. The accuracy gap is about one point, so treat it as a small single-run difference rather than a benchmark.
+
+<img src="assets/divider.svg" alt="" width="100%">
+
+## ◈ Preview
+
+<div align="center">
+  <img src="docs/preview.webp" alt="Preview cover for the financial sentiment project" width="80%">
+</div>
+
+<img src="assets/divider.svg" alt="" width="100%">
+
+## ◈ Tech Stack
+
+| Layer | Technologies | Purpose |
+|---|---|---|
+| Language | Python | Notebook code |
+| Transformers | PyTorch, Hugging Face Transformers and Datasets | Fine-tuning BERT and FinBERT |
+| Classical ML | scikit-learn, NLTK | TF-IDF, Naive Bayes, stemming and lemmatization |
+| Data and plots | pandas, NumPy, Matplotlib | Cleaning, metrics and confusion matrices |
+| Environment | Jupyter, Google Colab | Running the notebooks (GPU used for the transformer runs) |
+
+<img src="assets/divider.svg" alt="" width="100%">
+
+## ◈ Getting Started
+
+Datasets are public. Check the first cells of each notebook for the expected file paths.
+
+```bash
+git clone https://github.com/Saji-d/natural-language-processing.git
+cd natural-language-processing
+pip install jupyter pandas numpy scikit-learn matplotlib nltk torch transformers datasets
+jupyter notebook
+```
+
+For the transformer notebook a GPU runtime such as Google Colab is recommended. Upload the notebook there and run all cells.
+
+<img src="assets/divider.svg" alt="" width="100%">
+
+## ◈ Project Structure
+
 ```text
-natural-language-processing-projects/
-│
+natural-language-processing/
 ├── financial-sentiment-analysis-bert-vs-finbert/
 │   ├── financial_sentiment_bert_vs_finbert.ipynb
 │   ├── README.md
-│   └── report/
-│       └── financial_sentiment_bert_vs_finbert.pdf
-│
+│   └── report/financial_sentiment_bert_vs_finbert.pdf
 ├── twitter-sentiment-analysis/
 │   ├── twitter_sentiment_analysis.ipynb
 │   ├── README.md
-│   └── report/
-│       └── twitter-sentiment-analysis.pdf
-│
-├── .gitignore
-├── LICENSE
-└── README.md
+│   └── report/twitter-sentiment-analysis.pdf
+├── assets/      banner and divider
+├── docs/        preview image
+└── LICENSE
 ```
----
 
-## 🎓 Academic Context
-These projects were completed as part of **Natural Language Processing coursework**, with emphasis on:
-- Practical NLP pipelines
-- Machine learning and transformer-based models
-- Dataset handling and evaluation
-- Research-style experimentation and reporting
+<img src="assets/divider.svg" alt="" width="100%">
 
----
+## ◈ Author
 
-## 👤 Author
-**Sajidur Rahman Sajid**  
-Computer Science & Engineering (CSE)  
-Aspiring **AI / Machine Learning / NLP Engineer**
+**Sajidur Rahman Sajid** - Full-Stack Developer and AI engineer from Dhaka.
+
+[Portfolio](https://www.sajidur.me) · [LinkedIn](https://www.linkedin.com/in/sajidur-rahman-sajid/) · [GitHub](https://github.com/Saji-d) · [Email](mailto:sajidsajidurrahman99@gmail.com)
+
+<sub>Released under the MIT licence.</sub>
